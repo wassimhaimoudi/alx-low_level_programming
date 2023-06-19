@@ -8,4 +8,4 @@ This repository contains two folders (by far):
 2. **0x01-variables_if_else_while**
 
 
-*Note: This project is still a work in progress and the content is always subject to change.*
+*Note: This project is still a work in progress. The content section is **always** subject to change.*
