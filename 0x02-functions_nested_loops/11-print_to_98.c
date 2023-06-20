@@ -1,7 +1,7 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
- * print_to_98 - print all natural numbers to 98.
+ * print_to_98 - print all natural numbers to ninty nine.
  * @n: Starting number for the function.
  */
 void print_to_98(int n)
