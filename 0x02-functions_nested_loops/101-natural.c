@@ -1,8 +1,18 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
+/**
+ * main - entry point.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	below_1024();
+	return (0);
+}
 
 /**
- * sum_of_3 - sums the multiples of 3 under 1024.
+ * below_1024 - sums the multiples of 3 under 1024.
  */
 void sum_of_3(void)
 {

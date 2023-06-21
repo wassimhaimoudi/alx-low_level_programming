@@ -11,4 +11,4 @@ void times_table(void);
 int add(int, int);
 void print_to_98(int n);
 void print_times_table(int n);
-void sum_of_3(void);
+void below_1024(void);
