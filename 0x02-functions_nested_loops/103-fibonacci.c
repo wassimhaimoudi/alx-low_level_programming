@@ -29,7 +29,7 @@ void even_fibonacci(void)
 		t1 = t2;
 		t2 = n;
 		n = t1 + t2;
-		if (n < 4000000 || (n % 2) == 0)
+		if (n < 4000000 && (n % 2) == 0)
 			s = s + n;
 	}
 	printf("%ld", s);
