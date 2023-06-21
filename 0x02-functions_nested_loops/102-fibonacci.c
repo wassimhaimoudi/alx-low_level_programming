@@ -22,13 +22,13 @@ void fibonacci_50(void)
 	t2 = 2;
 	n = t1 + t2;
 	printf("%ld, %ld, %ld, ", t1, t2, n);
-	for (i = 3; i <= 50; i++)
+	for (i = 3; i < 50; i++)
 	{
 		t1 = t2;
 		t2 = n;
 		n = t1 + t2;
 		printf("%ld", n);
-		if (i < 50)
+		if (i < 49)
 			printf(", ");
 	}
 	printf("\n");
