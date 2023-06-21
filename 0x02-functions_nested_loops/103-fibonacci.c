@@ -24,8 +24,11 @@ void even_fibonacci(void)
 	t2 = 2;
 	n = t1 + t2;
 	s = t2;
-	for (i = 3; i < 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
+		t1 = t2;
+		t2 = n;
+		n = t1 + t2;
 		if (n < 4000000 || (n % 2) == 0)
 			s = s + n;
 	}
