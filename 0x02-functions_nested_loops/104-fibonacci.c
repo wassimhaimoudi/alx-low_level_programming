@@ -23,7 +23,7 @@ void fibonacci_98(void)
 	t1 = 1;
 	t2 = 2;
 	printf("%u, %u", t1, t2);
-	for (i = 3; i <= 98; i++)
+	for (i = 3; i <= 100; i++)
 	{
 		n = t1 + t2;
 		printf(", %u", n);
