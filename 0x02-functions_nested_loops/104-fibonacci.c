@@ -22,14 +22,13 @@ void fibonacci_98(void)
 
 	t1 = 1;
 	t2 = 2;
-	n = t1 + t2;
-	printf("%u, %u, %u", t1, t2, n);
+	printf("%u, %u", t1, t2);
 	for (i = 3; i <= 98; i++)
 	{
-		t1 = t2;
-		t2 = n;
 		n = t1 + t2;
 		printf(", %u", n);
+		t1 = t2;
+		t2 = n;
 	}
 	printf("\n");
 }
