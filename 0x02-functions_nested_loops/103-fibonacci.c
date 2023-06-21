@@ -29,6 +29,6 @@ void even_fibonacci(void)
 		if (n < 4000000 || (n % 2) == 0)
 			s = s + n;
 	}
-	printf("%d", s);
+	printf("%ld", s);
 	printf("\n");
 }
