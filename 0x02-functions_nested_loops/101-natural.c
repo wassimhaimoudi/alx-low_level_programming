@@ -14,7 +14,7 @@ int main(void)
 /**
  * below_1024 - sums the multiples of 3 under 1024.
  */
-void sum_of_3(void)
+void below_1024(void)
 {
 	int i, s;
 
