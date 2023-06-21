@@ -13,3 +13,4 @@ void print_to_98(int n);
 void print_times_table(int n);
 void below_1024(void);
 void fibonacci_50(void);
+void even_fibonacci(void);
