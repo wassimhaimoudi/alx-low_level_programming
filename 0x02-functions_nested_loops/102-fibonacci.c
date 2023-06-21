@@ -29,7 +29,7 @@ void fibonacci_50(void)
 		n = t1 + t2;
 		printf("%ld", n);
 		if (i < 50)
-			print(", ");
+			printf(", ");
 	}
 	printf("\n");
 }
