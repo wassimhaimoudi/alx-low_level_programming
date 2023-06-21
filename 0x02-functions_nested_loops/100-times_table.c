@@ -8,9 +8,9 @@ void print_times_table(int n)
 {
 	int i, j, p;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i <= n; i++)
 	{
-		for (j = 0, j < n)
+		for (j = 0; j <= n;)
 		{
 			p = i * j;
 			if (j == 0)
@@ -30,8 +30,8 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar('0' (p / 10));
-				_putchar('0' (p % 10));
+				_putchar('0' + (p / 10));
+				_putchar('0' + (p % 10));
 			}
 			else if (p >= 100)
 			{
