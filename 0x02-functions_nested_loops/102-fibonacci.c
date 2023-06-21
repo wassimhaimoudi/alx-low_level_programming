@@ -21,13 +21,13 @@ void fibonacci_50(void)
 	t1 = 1;
 	t2 = 2;
 	n = t1 + t2;
-	printf("%d, %d, %d, ", t1, t2, n);
+	printf("%ld, %ld, %ld, ", t1, t2, n);
 	for (i = 3; i <= 50; i++)
 	{
 		t1 = t2;
 		t2 = n;
 		n = t1 + t2;
-		printf("%d", n);
+		printf("%ld", n);
 		if (i < 50)
 			print(", ");
 	}
