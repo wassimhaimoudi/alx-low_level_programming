@@ -17,15 +17,15 @@ int main(void)
  */
 void fibonacci_98(void)
 {
-	unsigned int t1, t2, n1, n2, r1, r2;
+	unsigned long t1, t2, n1, n2, r1, r2;
 	int i;
 
 	t1 = 1;
 	t2 = 2;
-	printf("%u", t1);
+	printf("%lu", t1);
 	for (i = 3; i < 91; i++)
 	{
-		printf(", %u", t2);
+		printf(", %lu", t2);
 		t2 = t2 + t1;
 		t1 = t2 - t1;
 	}
@@ -37,8 +37,8 @@ void fibonacci_98(void)
 
 	for (i = 92; i < 99; i++)
 	{
-		printf(", %u", r1 + (r2 / 1000000000));
-		printf("%u", r2 % 1000000000);
+		printf(", %lu", r1 + (r2 / 1000000000));
+		printf("%lu", r2 % 1000000000);
 		r1 = r1 + n1;
 		n1 = r1 - n1;
 		r2 = r2 + n2;
