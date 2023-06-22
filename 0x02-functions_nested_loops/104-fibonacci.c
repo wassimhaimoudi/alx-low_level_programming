@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - Entry point.
@@ -7,15 +6,6 @@
  * Return: Always 0.
  */
 int main(void)
-{
-	fibonacci_98();
-	return (0);
-}
-
-/**
- * fibonacci_98 - prints the first 98 Fibonacci numbers.
- */
-void fibonacci_98(void)
 {
 	unsigned long int t1, t2, n1, n2, r1, r2, i;
 
@@ -44,4 +34,5 @@ void fibonacci_98(void)
 		n2 = r2 - n2;
 	}
 	printf("\n");
+	return (0);
 }
