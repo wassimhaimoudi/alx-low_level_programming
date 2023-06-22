@@ -1,11 +1,30 @@
+#include <atdio.h>
 #include "main.h"
+
+/**
+ * main -prints the largest number.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int a, b, c;
+	int largest;
+
+	a = 972;
+	b = -98;
+	c = 0;
+	largest_number(a, b, c);
+	return (0);
+
+}
 
 /**
  * largest_number - returns the largest number
  * @a: the first number.
  * @b: the second number.
  * @c: the third number.
- * Return: Always 0.
+ * Return: the largest number of the the three numbers.
  */
 
 int largest_number(int a, int b, int c)
