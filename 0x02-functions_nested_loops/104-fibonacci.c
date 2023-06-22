@@ -17,8 +17,7 @@ int main(void)
  */
 void fibonacci_98(void)
 {
-	unsigned long t1, t2, n1, n2, r1, r2;
-	int i;
+	unsigned long int t1, t2, n1, n2, r1, r2, i;
 
 	t1 = 1;
 	t2 = 2;
