@@ -24,11 +24,12 @@ void fizz_buzz(void)
 			printf("Buzz ");
 			continue;
 		}
-		else if ((i % 5 == 0) && (i % 3 == 0))
+		else if (i % 15 == 0)
 		{
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 			continue;
 		}
 		printf("%d ", i);
 	}
+	printf("\n");
 }
