@@ -15,7 +15,7 @@ int main(void)
 		if (n % div == 0)
 			n /= div;
 	}
-	printf("%ld", div);
+	printf("%ld\n", div);
 
 	return (0);
 }
