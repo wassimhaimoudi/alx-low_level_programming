@@ -5,24 +5,15 @@
  * @s: strin to be reversed and printed
  *
  */
-
 void print_rev(char *s)
 {
-	int i, len, middle;
+	int i, len;
 
-	len = 0;
-	for (i = 0; s[i] != '\0'; i++)
-		len++;
-
-	middle = len / 2;
-	for (i = 0; i < middle; i++)
+	for (len = 0; s[len] != '\0'; len++)
 	{
-		s[i] = s[i] + s[len - i - 1];
-		s[i - i - 1] = s[i] - s[len - i - 1];
-		s[i] = s[i] - s[len - i - 1];
 	}
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = len - 1; i >= 0; i--)
 		_putchar(s[i]);
 	_putchar('\n');
 }
