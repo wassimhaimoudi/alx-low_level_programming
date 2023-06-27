@@ -21,7 +21,7 @@ int _atoi(char *s)
 			sign = -1;
 			s++;
 		}
-
+	}
 	while ((*s >= '0' && *s <= '9') && *s != '\0')
 	{
 		digit = *s - '0';
