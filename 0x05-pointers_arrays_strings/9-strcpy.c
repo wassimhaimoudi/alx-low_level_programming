@@ -9,10 +9,9 @@
  * Return: pointer to dest.
  */
 
-char *_strcpy(cahr *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	char *destStart = dest;
-	int i;
 
 	while (*src != '\0')
 	{
