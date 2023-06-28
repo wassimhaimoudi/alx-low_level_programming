@@ -13,14 +13,13 @@ int _atoi(char *s)
 
 	sign = 1;
 	res = 0;
-	do
-	{
+	do {
 		if (*s == '-')
 			sign = -1;
 		else if (*s >= '0' && *s <= '9')
 			res = (res * 10) + (*s - '0');
 		else if (res > 0)
-		       break;	
-	} while (*s++)
+			break;
+	} while (*s++);
 	return (sign * res);
 }
