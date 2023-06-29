@@ -10,8 +10,6 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	if (dest == NULL || src == NULL || n == 0)
-		return (dest);
 	size_t i;
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
