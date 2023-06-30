@@ -10,7 +10,7 @@ char *cap_string(char *s)
 {
 	int i;
 
-	for (i = 1; s[i] != '\0'; i++)
+	while ( s[i] != '\0')
 	{
 		if (str[i - 1] == ' ' ||
 			str[i - 1] == '\t' ||
@@ -29,6 +29,7 @@ char *cap_string(char *s)
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - ('a' - 'A');
 		}
+		i++;
 	}
 	if (s[0] >= 'a' && s[0] <= 'z')
 		s[0] = s[0] - ('a' - 'A');
