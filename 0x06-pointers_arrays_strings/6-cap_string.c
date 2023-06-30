@@ -27,10 +27,10 @@ char *cap_string(char *s)
 			str[i - 1] == '}')
 		{
 			if (s[i] >= 'a' && s[i] <= 'z')
-				s = s - ('a' - 'A');
+				s[i] = s[i] - ('a' - 'A');
 		}
 	}
 	if (s[0] >= 'a' && s[0] <= 'z')
-		s = s - ('a' - 'A');
+		s[0] = s[0] - ('a' - 'A');
 	return (s);
 }
