@@ -17,7 +17,7 @@ char *rot13(char *s)
 		while (l1[j] != '\0')
 		{
 			if (s[i] == l1[j])
-				s[i] == l2[j];
+				s[i] =`l2[j];
 			j++;
 		}
 		i++;
