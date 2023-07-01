@@ -8,16 +8,21 @@
 
 char *rot13(char *s)
 {
-	int i = 0, j = 0;
+	int i, j;
 	char l1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char l2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
+	i = 0;
+	j = 0;
 	while (s[i] != '\0')
 	{
 		while (l1[j] != '\0')
 		{
 			if (s[i] == l1[j])
-				s[i] =`l2[j];
+			{
+				s[i] = l2[j];
+				break;
+			}
 			j++;
 		}
 		i++;
