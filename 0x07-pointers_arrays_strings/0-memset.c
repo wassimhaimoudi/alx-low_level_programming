@@ -15,6 +15,8 @@ char *_memset(char *s, char b, unsigned int n)
 
 	for (; *ptr != '\0' && n > 0;)
 	{
+		if (*p == 0)
+			break;
 		*ptr++ = b;
 		n--;
 	}
