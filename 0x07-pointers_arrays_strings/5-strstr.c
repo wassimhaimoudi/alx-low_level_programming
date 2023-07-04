@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdbool.h>
 #include <stddef.h>
+
 /**
  * _strstr - finds the first occurrence of the substring
  * @haystack: the main string
@@ -29,5 +29,5 @@ char *_strstr(char *haystack, char *needle)
 		else
 			return (haystack + i);
 	}
-	return (0);
+	return (NULL);
 }
