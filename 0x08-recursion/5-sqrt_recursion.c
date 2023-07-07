@@ -9,11 +9,11 @@
 
 int sqrt_checker(int n, int m)
 {
-	if (n * n == m)
+	if (m * m == n)
 		return (m);
-	if (n * n > m)
+	if (m * m > m)
 		return (-1);
-	return (sqrt_checker(n + 1, m));
+	return (sqrt_checker(n, m + 1));
 }
 
 /**
@@ -28,5 +28,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0)
 		return (0);
-	return (sqrt_checker(1, n));
+	return (sqrt_checker(n, 1));
 }
