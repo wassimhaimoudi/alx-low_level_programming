@@ -10,7 +10,7 @@
 
 int is_prime_helper(int n, int i)
 {
-	if (n == 1 || n == 2)
+	if (n == 2)
 		return (1);
 	if (n < 2)
 		return (0);
