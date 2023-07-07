@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
  * is_prime_helper - Helper function to check if a number is prime recursively.
@@ -15,7 +16,7 @@ int is_prime_helper(int n, int i)
 		return (0);
 	if (n % i == 0)
 		return (0);
-	if (i < _sqrt_recursion(n))
+	if (i < sqrt(n))
 		return (1);
 	return (is_prime_helper(n, i + 1));
 }
