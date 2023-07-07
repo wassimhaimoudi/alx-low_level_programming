@@ -11,7 +11,7 @@ int sqrt_checker(int n, int m)
 {
 	if (m * m == n)
 		return (m);
-	if (m * m > m)
+	if (m * m > n)
 		return (-1);
 	return (sqrt_checker(n, m + 1));
 }
