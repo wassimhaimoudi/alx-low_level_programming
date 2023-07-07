@@ -10,15 +10,13 @@
 
 int is_prime_helper(int n, int i)
 {
-	if (n == 2)
+	if (n == 1 || n == 2)
 		return (1);
 	if (n < 2)
 		return (0);
-	if (n % i == 0)
+	if (n % i == 0 && i > 0)
 		return (0);
-	if (i < sqrt(n))
-		return (1);
-	return (is_prime_helper(n, i + 1));
+	return (is_prime_helper(n, i - 1));
 }
 
 /**
@@ -30,5 +28,5 @@ int is_prime_helper(int n, int i)
 
 int is_prime(int n)
 {
-	return (is_prime_helper(n, 2));
+	return (is_prime_helper(n, n - 1));
 }
