@@ -20,13 +20,13 @@ int is_prime_helper(int n, int i)
 }
 
 /**
- * is_prime - Function to check if a number is prime.
+ * is_prime_number - Function to check if a number is prime.
  *
  * @n: The number to be checked.
  * Return: 1 if n is prime, otherwise 0.
  */
 
-int is_prime(int n)
+int is_prime_number(int n)
 {
 	return (is_prime_helper(n, n - 1));
 }
