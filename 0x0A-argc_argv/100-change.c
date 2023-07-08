@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - prints the minimum number of coins to make change for an amount of money.
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
 		while (number >= coin_vals[i])
 		{
 			result++;
-			number -= coin_vals[j];
+			number -= coin_vals[i];
 		}
 	}
 
