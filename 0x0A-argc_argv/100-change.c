@@ -5,7 +5,7 @@
  * main - prints the minimum number of coins to make change.
  * @argc: number of args passed into the program.
  * @argv: 2d array of args.
- * Return: Always 0.
+ * Return: 0, otherwise 1 if the argument passed is negative.
  */
 
 int main(int argc, char *argv[])
