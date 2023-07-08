@@ -22,7 +22,10 @@ int main(int argc, char *argv[])
 	}
 
 	if (number < 0)
-		printf("0\n");
+	{
+		printf("%d\n", 0);
+		return (0);
+	}
 
 	for (i = 0; i < 5 && number >= 0; i++)
 	{
