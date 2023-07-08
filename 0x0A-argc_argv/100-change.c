@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money.
+ * main - prints the minimum number of coins to make change.
  * @argc: number of args passed into the program.
  * @argv: 2d array of args.
  * Return: Always 0.
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i, result, number;
 	int coin_vals[] = {25, 10, 5, 2, 1};
-	
+
 	number = atoi(argv[1]);
 	result = 0;
 	if (argc != 2)
