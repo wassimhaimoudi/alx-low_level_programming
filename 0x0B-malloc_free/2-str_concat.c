@@ -13,7 +13,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j, len1, len2;
+	int i, j, len1, len2;
 	char *p;
 
 	if (s1 != NULL)
@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2)
 	{
-		for (j = 0 ; j < len1 + len2; j++)
+		for (j = 0 ; j < len2; j++)
 		{
 			p[len1 + j] = s2[j];
 		}
