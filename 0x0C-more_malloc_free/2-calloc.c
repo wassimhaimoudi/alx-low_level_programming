@@ -15,7 +15,6 @@ void _memset(char *s, char c)
 
 	for (i = 0; s[i]; i++)
 		*(s + i) = c;
-	s[i] = '\0';
 }
 
 /**
@@ -36,7 +35,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	total = nmemb * size;
 
-	p = malloc(total + 1);
+	p = malloc(total);
 
 	if (p == NULL)
 		return (NULL);
