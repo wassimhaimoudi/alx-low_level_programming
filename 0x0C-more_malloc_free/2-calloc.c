@@ -7,14 +7,15 @@
  * _memset - fills the memory with a char.
  * @s: the space in memory to be filled.
  * @c: the character used to fill the memory.
+ * @n: the number of bytes to fill.
  */
 
-void _memset(void *s, int c, unsigned int n)
+void _memset(char *s, int c, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
-		*((char *)s + i) = c;
+		*(s + i) = c;
 }
 
 /**
@@ -26,7 +27,7 @@ void _memset(void *s, int c, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *p;
+	char *p;
 	unsigned int total;
 	int zero = 0;
 
