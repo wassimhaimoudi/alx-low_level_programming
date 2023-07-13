@@ -9,12 +9,12 @@
  * @c: the character used to fill the memory.
  */
 
-void _memset(char *s, int c, unsigned int n)
+void _memset(void *s, int c, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
-		*(s + i) = c;
+		*((char *)s + i) = c;
 }
 
 /**
@@ -26,7 +26,7 @@ void _memset(char *s, int c, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	void *p;
 	unsigned int total;
 	int zero = 0;
 
