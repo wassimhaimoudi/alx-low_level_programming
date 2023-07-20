@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * main - entry point.
  *
@@ -12,23 +12,22 @@
  */
 int main(int argc, char *argv[])
 {
-	char *operator;
-	int num1, num2;
+	int (*oprt)(int, int);
 
-	num1 = atoi(argv[1]);
-	operator = argv[2];
-	num2 = atoi(argv[3]);
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	if (get_op_func(operator) == NULL)
+	oprt = get_op_func(argv[2]);
+
+	if (!oprt)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", get_op_func(operator)(num1, num2));
+
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
