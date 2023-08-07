@@ -12,8 +12,8 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_descriptor;
-	ssize_t number_read, number_write, total;
+	int file_d;
+	ssize_t number_r, number_w;
 	char *buffer;
 
 	buffer = (char *)malloc(sizeof(char) * letters);
@@ -24,17 +24,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename)
 		return (0);
 
-	file_descriptor = open(filename, O_RDWR);
+	file_d = open(filename, O_RDWR);
+	number_r = read(file_d, buffer, sizeof(char) * letters);
+	number_w = write(STDOUT_FILENO, buffer, number_r);
 
-	if (file_descriptor == -1)
+	if (number_w == -1 || number_w == -1 || file_d == -1 || number_w != number_r)
+	{
+		free(buffer);
 		return (0);
+	}
 
-	number_read = read(file_descriptor, buffer, sizeof(char) * letters);
-	number_write = write(STDOUT_FILENO, buffer, sizeof(char) * letters);
-
-	if (number_read == -1 && number_write == -1)
-		return (0);
-	total = number_read;
 	free(buffer);
-	return (total);
+	close(file_d);
+
+	return (number_w);
 }
