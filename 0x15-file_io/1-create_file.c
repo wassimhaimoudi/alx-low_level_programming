@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (i = 0; text_content[i]; i++)
 		;
-	
+
 		file_d = open(filename, O_CREAT | O_RDWR, 0600);
 		number_w = write(file_d, text_content, i);
 
@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 		if (file_d == -1)
 			return (-1);
 	}
-	
+
 	close(file_d);
 
 	return (1);
