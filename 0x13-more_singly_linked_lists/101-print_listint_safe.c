@@ -1,11 +1,13 @@
 #include "lists.h"
-#include <unistd.h>
 
-/*
- * print_listint_safe - function that prints a linked list
+/**
+ * print_listint_safe - function name.
  * @head: the head of the linked list
+ *
+ * Description: prints the elements of the linked list
  * Return: the number of nodes in the list
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nnodes = 0;
@@ -17,7 +19,7 @@ size_t print_listint_safe(const listint_t *head)
 		checker = head;
 		for (; checker;)
 		{
-			printf("[%p] %d\n",(void *)temp->next, temp->n);
+			printf("[%p] %d\n", (void *)temp->next, temp->n);
 			nnodes++;
 			temp = temp->next;
 			checker = checker->next->next;
