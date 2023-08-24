@@ -10,26 +10,31 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
+	const listint_t *temp = NULL;
+	const listint_t *checker = NULL;
 	size_t nnodes = 0;
-	const listint_t *temp, *checker;
+	size_t new;
 
-	if (head)
+	temp = head;
+	while (temp)
 	{
-		temp = head;
+		printf("[%p] %d\n", (void *)temp, temp->n);
+		nnodes++;
+		temp = temp->next;
 		checker = head;
-		for (; checker;)
+		new = 0;
+		while (new < nnodes)
 		{
-			printf("[%p] %d\n", (void *)temp->next, temp->n);
-			nnodes++;
-			temp = temp->next;
-			checker = checker->next->next;
-			if (checker == temp)
-				break;
+			if (temp == checker)
+			{
+				printf("-> [%p] %d\n", (void *)temp, temp->n);
+				return (nnodes);
+			}
+			checker = checker->next;
+			new++;
 		}
-		return (nnodes);
+		if (!head)
+			exit(98);
 	}
-	else
-	{
-		exit(98);
-	}
+	return (nnodes);
 }
