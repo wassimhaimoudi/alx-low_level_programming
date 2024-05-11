@@ -15,10 +15,6 @@ int jump_search(int *array, size_t size, int value)
 		size_t a = 0;
 		size_t b = floor(sqrt(size));
 
-		/* array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-		 *          0  1  2  3  4  5  6  7  8  9
-		 *                   a        b
-		 */
 		while (array[min(b, size) - 1] < value)
 		{
 			printf("Value checked array[%ld] = [%d]\n", a, array[a]);
@@ -43,7 +39,8 @@ int jump_search(int *array, size_t size, int value)
 	}
 	return (-1);
 }
-/** min - Calculates the minimum value of two input numbers
+/**
+ * min - Calculates the minimum value of two input numbers
  * @n: First number
  * @m: Second number
  *
