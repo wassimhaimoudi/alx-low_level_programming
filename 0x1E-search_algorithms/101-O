@@ -1,1 +1,1 @@
-O(sqrt(i))
+O(n/sqrt(n) + sqrt(n))
