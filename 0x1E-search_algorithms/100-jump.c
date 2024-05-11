@@ -10,45 +10,33 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	if (array)
-	{
-		size_t a = 0;
-		size_t b = floor(sqrt(size));
+	int index, m, k, prev;
 
-		while (array[min(b, size) - 1] < value)
-		{
-			printf("Value checked array[%ld] = [%d]\n", a, array[a]);
-			a = b;
-			b += floor(sqrt(size));
-			if (a >= size)
-				return (-1);
-		}
-		printf("Value found between indexes [%ld] and [%ld]\n", a, b);
-		while (array[a] < value)
-		{
-			printf("Value checked array[%ld] = [%d]\n", a, array[a]);
-			a++;
-			if (a == min(b, size))
-				return (-1);
-		}
-
-		if (array[a] == value)
-			return (a);
-
+	if (array == NULL || size == 0)
 		return (-1);
+
+	m = (int)sqrt((double)size);
+	k = 0;
+	prev = index = 0;
+
+	do {
+		printf("Value checked array[%d] = [%d]\n", index, array[index]);
+
+		if (array[index] == value)
+			return (index);
+		k++;
+		prev = index;
+		index = k * m;
+	} while (index < (int)size && array[index] < value);
+
+	printf("Value found between indexes [%d] and [%d]\n", prev, index);
+
+	for (; prev <= index && prev < (int)size; prev++)
+	{
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
+		if (array[prev] == value)
+			return (prev);
 	}
+
 	return (-1);
-}
-/**
- * min - Calculates the minimum value of two input numbers
- * @n: First number
- * @m: Second number
- *
- * Return: The smallest number.
- */
-size_t min(size_t n, size_t m)
-{
-	if (n <= m)
-		return (n);
-	return (m);
 }
